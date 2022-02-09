@@ -1,11 +1,14 @@
 import './App.css'
-import StartPage from  './components/StartPage'
+import StartPage from './components/StartPage'
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
 
   return (
     <div className="app">
-      <StartPage></StartPage>
+      <Routes>
+        <Route path="/" element={<StartPage></StartPage>}></Route>
+      </Routes>
     </div>
   )
 }
