@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Karla', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-image: url('/images/background-sm.png');
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+
+@media (min-width: 768px) {
+  body {
+    background-image: url('/images/background.png');
+  }
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+button {
+  border: none;
+  color: white;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  background-color: #4D5B9E;
+}
+
+button:hover {
+  background-color: #6577CB;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

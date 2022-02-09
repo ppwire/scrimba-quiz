@@ -1,0 +1,24 @@
+.app{
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   height:100vh;
+}
+
+.start-container {
+   text-align: center;
+}
+
+.start-container > * {
+   margin-bottom:1rem;
+}
+
+
+.start-container> h2{
+   font-weight: 300;
+}
+
+.start-btn{
+   padding: 1em 5em;
+   border-radius:1em;
+}
