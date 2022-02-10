@@ -8,6 +8,7 @@ import styles from './Quiz.module.css';
 const Quiz = () => {
    const { quizList: quizList, loading: loading } = useSelector(state => state.quiz)
    const [isFinish, setIsFinish] = useState(false)
+   const [isAlert, setIsAlert] = useState(false)
    const [score, setScore] = useState(0)
    const dispatch = useDispatch()
 
@@ -22,7 +23,7 @@ const Quiz = () => {
    function checkAnswer() {
       if (!isFinish) {
          if (quizList.find(el => !el.answer)) {
-            console.log('Fill all answer !!')
+            setIsAlert(true)
             return
          }
          const score = quizList.filter(el => el.answer === el.correct_answer).length
@@ -30,6 +31,7 @@ const Quiz = () => {
          setIsFinish(true)
       } else {
          setIsFinish(false)
+         setIsAlert(false)
          setScore(0)
          dispatch(getQuiz())
       }
@@ -48,6 +50,9 @@ const Quiz = () => {
                      updateAnswer={onUpdateQuiz} isFinish={isFinish} correctAnswer={el.correct_answer}
                   ></QuizItem>
                })}
+               {(isAlert && !isFinish) && <div className={`${styles.alert} ${styles.spacer__bottom}`}>
+                  Please answer all your question
+               </div>}
                <div className={styles.btn__flex}>
                   {isFinish && <span className={styles.score__msg}>{getScore()}</span>}
                   <button className={styles.btn} onClick={checkAnswer}>
