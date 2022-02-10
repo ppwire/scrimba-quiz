@@ -9,8 +9,8 @@ body {
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
-
 
 @media (min-width: 768px) {
   body {

@@ -1,13 +1,23 @@
 import styles from './QuizItem.module.css'
 
 
-const QuizItem = ({ question, answer, choices, id, updateAnswer }) => {
+const QuizItem = ({ question, answer, choices, id, updateAnswer, isFinish, correctAnswer }) => {
 
    function displayColor(payload) {
-      if (payload === answer) {
-         return styles.question__choices__active
+      if (isFinish) {
+         if (answer === correctAnswer && payload === answer) {
+            return styles.question__choices__correct
+         } else if (payload === answer) {
+            return styles.question__choices__incorrect
+         }else{
+            return styles.question__choices__disabled
+         }
       } else {
-         return styles.question__choices
+         if (payload === answer) {
+            return styles.question__choices__selected
+         } else {
+            return styles.question__choices
+         }
       }
    }
 

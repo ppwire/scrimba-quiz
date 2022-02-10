@@ -1,16 +1,23 @@
-.container{
-   margin:2rem 2rem;
+.container {
+   margin: 2rem 2rem;
    display: flex;
    flex-wrap: nowrap;
    flex-direction: column;
 }
 
-.btn__flex{
-   text-align:center;
+.btn__flex {
+   text-align: center;
 }
 
-.btn{
-   padding:1rem 2rem;
-   text-align:center;
+.score__msg {
+   font-size: 1.25rem;
+   font-weight: bold;
+   color:#293264;
+   margin-right:1rem;
+}
+
+.btn {
+   padding: 1rem 2rem;
+   text-align: center;
    border-radius: 10px;
 }

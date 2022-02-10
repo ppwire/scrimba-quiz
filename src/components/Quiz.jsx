@@ -1,21 +1,42 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateAnswer } from "../slice/QuizSlice";
+import { updateAnswer, getQuiz } from "../slice/QuizSlice";
 import QuizItem from './QuizItem'
 import styles from './Quiz.module.css';
 
 
 const Quiz = () => {
    const { quizList: quizList, loading: loading } = useSelector(state => state.quiz)
+   const [isFinish, setIsFinish] = useState(false)
+   const [score, setScore] = useState(0)
    const dispatch = useDispatch()
 
-   // useEffect(() => {
-   //    dispatch(getQuiz())
-   // }, [])
+   useEffect(() => {
+      dispatch(getQuiz())
+   }, [])
 
    function onUpdateQuiz(answer, id) {
-      console.log(answer, id)
-      dispatch(updateAnswer({ answer: answer, id: id }))
+      if (!isFinish) dispatch(updateAnswer({ answer: answer, id: id }))
+   }
+
+   function checkAnswer() {
+      if (!isFinish) {
+         if (quizList.find(el => !el.answer)) {
+            console.log('Fill all answer !!')
+            return
+         }
+         const score = quizList.filter(el => el.answer === el.correct_answer).length
+         setScore(score)
+         setIsFinish(true)
+      } else {
+         setIsFinish(false)
+         setScore(0)
+         dispatch(getQuiz())
+      }
+   }
+
+   function getScore() {
+      return `You scored ${score}/${quizList.length} correct answers`
    }
 
    return (
@@ -23,12 +44,15 @@ const Quiz = () => {
          {loading ? 'loading...' :
             <div>
                {quizList.map((el, index) => {
-                  return <QuizItem key={index} question={el.question} choices={el.choices} id={index} answer={el.answer}
-                     updateAnswer={onUpdateQuiz}
+                  return <QuizItem key={index} question={el.question} choices={el.choices} id={el.id} answer={el.answer}
+                     updateAnswer={onUpdateQuiz} isFinish={isFinish} correctAnswer={el.correct_answer}
                   ></QuizItem>
                })}
                <div className={styles.btn__flex}>
-                  <button className={styles.btn}><h3>SEND</h3></button>
+                  {isFinish && <span className={styles.score__msg}>{getScore()}</span>}
+                  <button className={styles.btn} onClick={checkAnswer}>
+                     <h3>{isFinish ? 'Play again' : "Check answer"}</h3>
+                  </button>
                </div>
             </div>
          }
