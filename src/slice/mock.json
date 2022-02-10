@@ -1,0 +1,86 @@
+{
+  "quizList": [
+    {
+      "id":0,
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which English football club has the nickname &#039;The Foxes&#039;?",
+      "correct_answer": "Leicester City",
+      "incorrect_answers": [
+        "Northampton Town",
+        "Bradford City",
+        "West Bromwich Albion"
+      ],
+      "choices": [
+        "West Bromwich Albion",
+        "Leicester City",
+        "Bradford City",
+        "Northampton Town"
+      ],
+      "answer": ""
+    },
+    {
+      "id":1,
+      "category": "Entertainment: Cartoon & Animations",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the name of Sid&#039;s dog in &quot;Toy Story&quot;?",
+      "correct_answer": "Scud",
+      "incorrect_answers": ["Buster", "Whiskers", "Mr. Jones"],
+      "choices": ["Mr. Jones", "Whiskers", "Buster", "Scud"],
+      "answer": ""
+    },
+    {
+      "id":2,
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Where does the book &quot;The Silence of the Lambs&quot; get its title from?",
+      "correct_answer": "The main character&#039;s trauma in childhood",
+      "incorrect_answers": [
+        "The relation it has with killing the innocents",
+        "The villain&#039;s favourite meal",
+        "The voice of innocent people being shut by the powerful"
+      ],
+      "choices": [
+        "The voice of innocent people being shut by the powerful",
+        "The villain&#039;s favourite meal",
+        "The relation it has with killing the innocents",
+        "The main character&#039;s trauma in childhood"
+      ],
+      "answer": ""
+    },
+    {
+      "id":3,
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What company developed the vocaloid Hatsune Miku?",
+      "correct_answer": "Crypton Future Media",
+      "incorrect_answers": ["Sega", "Sony", "Yamaha Corporation"],
+      "choices": ["Sony", "Crypton Future Media", "Yamaha Corporation", "Sega"],
+      "answer": ""
+    },
+    {
+      "id":4,
+      "category": "Entertainment: Japanese Anime & Manga",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the theme song of &quot;Neon Genesis Evangelion&quot;?",
+      "correct_answer": "A Cruel Angel&#039;s Thesis",
+      "incorrect_answers": [
+        "Stardust Crusaders",
+        "Requiem for a Dream",
+        "God Knows"
+      ],
+      "choices": [
+        "A Cruel Angel&#039;s Thesis",
+        "God Knows",
+        "Stardust Crusaders",
+        "Requiem for a Dream"
+      ],
+      "answer": ""
+    }
+  ]
+}
