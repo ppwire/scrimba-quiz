@@ -1,5 +1,6 @@
 import './App.css'
 import StartPage from './components/StartPage'
+import Quiz from './components/Quiz'
 import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="app">
       <Routes>
         <Route path="/" element={<StartPage></StartPage>}></Route>
+        <Route path="/quiz" element={<Quiz></Quiz>}></Route>
       </Routes>
     </div>
   )
