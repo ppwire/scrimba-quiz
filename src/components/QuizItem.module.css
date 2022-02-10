@@ -1,0 +1,37 @@
+.question__title {
+   color: #293264;
+   font-weight: bold;
+}
+
+.question {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   margin-bottom: 1rem;
+}
+
+.question__choices {
+   border: 2px solid #4D5B9E;
+   color: #293264;
+   padding: 4px 10px;
+   cursor: pointer;
+   border-radius: 8px;
+}
+
+.question__choices__active {
+   border: 2px solid #D6DBF5;
+   background-color: #D6DBF5;
+   color: #293264;
+   padding: 4px 10px;
+   cursor: pointer;
+   border-radius: 8px;
+}
+
+.question__group {
+   display: flex;
+   gap: 1rem;
+}
+
+.line {
+   border: 0.794239px solid #DBDEF0;
+}

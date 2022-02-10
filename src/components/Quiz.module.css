@@ -1,0 +1,16 @@
+.container{
+   margin:2rem 2rem;
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: column;
+}
+
+.btn__flex{
+   text-align:center;
+}
+
+.btn{
+   padding:1rem 2rem;
+   text-align:center;
+   border-radius: 10px;
+}
