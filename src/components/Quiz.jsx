@@ -43,7 +43,7 @@ const Quiz = () => {
 
    return (
       <div className={styles.container}>
-         {loading ? 'loading...' :
+         {loading ? <h2>Loading ...</h2> :
             <div>
                {quizList.map((el, index) => {
                   return <QuizItem key={el.id} question={el.question} choices={el.choices} id={el.id} answer={el.answer}
