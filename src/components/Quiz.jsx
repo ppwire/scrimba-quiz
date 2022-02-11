@@ -46,7 +46,7 @@ const Quiz = () => {
          {loading ? 'loading...' :
             <div>
                {quizList.map((el, index) => {
-                  return <QuizItem key={index} question={el.question} choices={el.choices} id={el.id} answer={el.answer}
+                  return <QuizItem key={el.id} question={el.question} choices={el.choices} id={el.id} answer={el.answer}
                      updateAnswer={onUpdateQuiz} isFinish={isFinish} correctAnswer={el.correct_answer}
                   ></QuizItem>
                })}
