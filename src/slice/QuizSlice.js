@@ -52,11 +52,10 @@ export const quizSlice = createSlice({
 
          for (let quiz of state.quizList) {
             quiz.choices = quiz.incorrect_answers.concat(quiz.correct_answer)
-            quiz.result = ""
+            quiz.answer = ""
             quiz.id = nanoid()
             shuffle(quiz.choices)
          }
-         console.log(state.quizList)
       },
       [getQuiz.rejected]: (state) => {
          state.loading = false
@@ -65,7 +64,7 @@ export const quizSlice = createSlice({
 })
 
 export { getQuiz }
-export const { updateAnswer } = quizSlice.actions
+export const { updateAnswer, setQuizList } = quizSlice.actions
 export default quizSlice.reducer
 
 
